@@ -4,6 +4,7 @@
     	<tr>
     		<th>Title</th>
     		<th>Body</th>
+            <th></th>
     	</tr>
     </thead>
     <tbody>
@@ -11,6 +12,11 @@
     	<tr>
     		<td class="title"><%= book.title %></td>
     		<td class="body"><%= book.body %></td>
+            <td>
+                <%= link_to 'Show', books_path(book) %>
+                <%= link_to 'Edit', edit_book_path(@book) %>
+                <%= link_to 'Destroy',book_path(@book) %>
+            </td>
     	</tr>
     	<% end %>
     </tbody>
